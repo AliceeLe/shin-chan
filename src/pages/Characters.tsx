@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import family from "../components/images/family.webp";
 import friend from "../components/images/friends.png";
@@ -54,7 +53,7 @@ const NavButtons: React.FC<NavButtonsProps> = ({ onNavClick }) => {
 
 interface CharacterCardProps {
   description: string;
-  image: React.ReactNode;
+  image: string;
   width: string;
   name: string;
 }

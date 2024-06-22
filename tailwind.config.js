@@ -18,11 +18,11 @@ module.exports = {
         fraunces: ['"Fraunces'],
       },
       backgroundImage: {
-        'background-welcome': "url('src/components/images/background2.jpg')",
-        'background-characters': "url('src/components/images/background-characters.jpeg')",
-        'background-family': "url('src/components/images/background-theme.jpg')",
-        'background-friends': "url('src/components/images/background-friends.jpg')",
-        'background-satire': "url('src/components/images/background-satire.jpg')",
+        'background-welcome': "url('/src/components/images/background2.jpg')",
+        'background-characters': "url('/src/components/images/background-characters.jpeg')",
+        'background-family': "url('/src/components/images/background-theme.jpg')",
+        'background-friends': "url('/src/components/images/background-friends.jpg')",
+        'background-satire': "url('/src/components/images/background-satire.jpg')",
       }
     },
   },
