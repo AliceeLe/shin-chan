@@ -1,8 +1,5 @@
 export * from "./Characters";
-export * from "./Themes";
-export * from "./Childhood";
+export * from "./Satire";
 export * from "./Family";
 export * from "./Friends";
-
-export * from "./Quiz";
 export * from "./Welcome";

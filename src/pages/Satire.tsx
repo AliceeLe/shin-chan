@@ -1,7 +1,7 @@
 import React from "react";
 import { SecondNav, Content  } from "../components";
 
-const Friends: React.FC = () => {
+const Satire: React.FC = () => {
   return (
     <div className="bg-background-theme bg-cover bg-center h-screen w-screen">
       <div className="relative">
@@ -16,4 +16,4 @@ const Friends: React.FC = () => {
   );
 };
 
-export { Friends };
+export { Satire };

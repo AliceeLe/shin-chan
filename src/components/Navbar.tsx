@@ -1,37 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC, ReactNode } from "react";
 import { Link } from "react-router-dom";
-import {
-  IoPeople,
-  IoGlobeOutline,
-} from "react-icons/io5";
-import { CiCircleQuestion } from "react-icons/ci";
+import { IoPeople, IoGlobeOutline } from "react-icons/io5";
 import { FaBookReader } from "react-icons/fa";
 import logo from './images/logo.png';
 
-const NavbarItem = ({
-  locationTo,
-  onClick,
-  title,
-  image,
-}) => {
-  const isProfileLink = locationTo === "/profile";
+interface NavbarItemProps {
+  locationTo: string;
+  onClick: () => void;
+  title: string;
+  image: ReactNode;
+}
 
+const NavbarItem: FC<NavbarItemProps> = ({ locationTo, onClick, title, image }) => {
   return (
     <Link
       to={locationTo}
       onClick={onClick}
-
       className="text-white no-underline h-full flex items-center p-1 flex flex-col justify-center items-center gap-1 group"
     >
       <div>{image}</div>
       <p className="text-white font-open-sans text-base font-2xl">
-          {title}
+        {title}
       </p>
     </Link>
   );
 };
 
-const Navbar = () => {
+const Navbar: FC = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -39,17 +34,16 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
-    handleClick();
     if (window.innerWidth <= 960) {
       setButton(false);
     } else {
       setButton(true);
-      console.log(button);
     }
   };
 
   useEffect(() => {
     window.addEventListener("resize", showButton);
+    showButton(); // initial check
 
     return () => {
       window.removeEventListener("resize", showButton);
@@ -87,18 +81,10 @@ const Navbar = () => {
             </li>
             <li>
               <NavbarItem
-                locationTo="/themes"
+                locationTo="/themes/family"
                 onClick={closeMobileMenu}
                 title="Themes"
                 image={<FaBookReader />}
-              />
-            </li>
-            <li>
-              <NavbarItem
-                locationTo="/quiz"
-                onClick={closeMobileMenu}
-                title="Quiz"
-                image={<CiCircleQuestion />}
               />
             </li>
           </div>
@@ -108,4 +94,4 @@ const Navbar = () => {
   );
 };
 
-export {Navbar};
+export { Navbar };

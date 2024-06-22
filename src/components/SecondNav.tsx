@@ -27,13 +27,13 @@ const SecondNav: React.FC = () => {
       <div className="shadow-md py-0 bg-galactic-blue">
         <ul className="p-2 mx-auto list-none flex items-center justify-around w-3/5 h-full">
           <li>
-            <SecondNavItem locationTo="/themes/childhood" title="Childhood" />
-          </li>
-          <li>
             <SecondNavItem locationTo="/themes/family" title="Family" />
           </li>
           <li>
             <SecondNavItem locationTo="/themes/friends" title="Friends" />
+          </li>
+          <li>
+            <SecondNavItem locationTo="/themes/satire" title="Satire" />
           </li>
         </ul>
       </div>

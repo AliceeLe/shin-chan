@@ -205,7 +205,6 @@ const CharacterCardTeachers: React.FC = () => {
   );
 };
 
-// Characters component
 const Characters: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("family");
 

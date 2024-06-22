@@ -11,7 +11,7 @@ const Welcome: React.FC = () => {
           five-year-old Shinnosuke "Shin" Nohara, who is a mischievous and outspoken
           kid. Viewers will go on a journey and observe how he navigates life with his family,
           friends, and teachers. The show is popular for its humor and satirie,
-          reflecting on the Asian family dynamics and childhood antics.
+          reflecting on the Asian family dynamics and satire antics.
         </p>
       </div>
     </div>
