@@ -16,7 +16,6 @@ import charMidori from "../components/images/char-midori.png";
 import charMatsuzaka from "../components/images/char-matsuzaka.png";
 import charMasumi from "../components/images/char-masumi.png";
 import charBunta from "../components/images/char-bunta.png";
-
 // NavCircles component
 interface NavCirclesProps {
   image: string;
@@ -26,7 +25,7 @@ interface NavCirclesProps {
 const NavCircles: React.FC<NavCirclesProps> = ({ image, onClick }) => {
   return (
     <div
-      className="h-24 w-24 rounded-full overflow-hidden cursor-pointer"
+      className="h-24 w-24 rounded-full overflow-hidden cursor-pointer border-white border-[3px]"
       onClick={onClick}
     >
       <img
@@ -45,7 +44,7 @@ interface NavButtonsProps {
 
 const NavButtons: React.FC<NavButtonsProps> = ({ onNavClick }) => {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 mt-40">
       <NavCircles image={family} onClick={() => onNavClick("family")} />
       <NavCircles image={friend} onClick={() => onNavClick("friends")} />
       <NavCircles image={teachers} onClick={() => onNavClick("teachers")} />
@@ -95,8 +94,8 @@ const CharacterCardRight: React.FC<CharacterCardProps> = ({
 
 const CharacterCardFamily: React.FC = () => {
   return (
-    <div className="h-4/5 w-4/6 bg-galactic-blue flex flex-col gap-4 my-20">
-      <h2>Meet the Nohara family</h2>
+    <div className="h-full w-4/6 bg-light-cream flex flex-col gap-10 px-10 py-10 overflow-y-scroll">
+      <h2 className="text-4xl text-teal-500">Meet the Nohara family</h2>
       <CharacterCardRight
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         image={charShin}
@@ -128,8 +127,8 @@ const CharacterCardFamily: React.FC = () => {
 
 const CharacterCardFriends: React.FC = () => {
   return (
-    <div className="h-4/5 w-4/6 bg-galactic-blue flex flex-col gap-4 my-20">
-      <h2>Meet Shin's friends</h2>
+    <div className="h-full w-4/6 bg-light-cream flex flex-col gap-10 px-10 py-10 overflow-y-scroll">
+      <h2 className="text-4xl text-teal-500">Meet Shin's friends</h2>
       <CharacterCardRight
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         image={charKazuma}
@@ -156,8 +155,8 @@ const CharacterCardFriends: React.FC = () => {
 
 const CharacterCardTeachers: React.FC = () => {
   return (
-    <div className="h-4/5 w-4/6 bg-galactic-blue flex flex-col gap-4 my-20">
-      <h2>Meet the teachers at Futaba kindergarten</h2>
+    <div className="h-full w-4/6 bg-light-cream flex flex-col gap-10 px-10 py-10 overflow-y-scroll">
+      <h2 className="text-4xl text-teal-500">Meet the teachers at Futaba kindergarten</h2>
       <CharacterCardRight
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         image={charMidori}
@@ -200,9 +199,10 @@ const Characters: React.FC = () => {
   };
 
   return (
-    <div className="bg-light-cream min-h-screen text-center">
-      <div className="flex justify-center items-center gap-20">
+    <div className="bg-background-characters bg-cover bg-center h-screen w-screen text-center">
+      <div className="flex justify-center items-start gap-20 h-full">
         <NavButtons onNavClick={setSelectedCategory} />
+        {/* Positioned at top left corner */}
         {renderCharacterCard()}
       </div>
     </div>

@@ -8,6 +8,17 @@
 	padding: 0;
 	font-family: "Hepta Slab", serif;
 	line-height: 1.8;
+}
 
+h1, h2 {
+	font-family: "Fraunces", serif;
+	font-family: "Fraunces", serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: italic;
+	font-variation-settings:
+	  "SOFT" 100,
+	  "WONK" 1;
+  
 }
 

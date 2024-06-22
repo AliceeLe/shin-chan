@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'light-cream': '#FFF7F0',
+        'light-cream': 'rgba(255, 247, 240, 0.80)',
         'galactic-blue': '#755CDE',
         'summer-yellow': '#F6A560',
-        'light-red': '#EB7565',
+        'light-red': '#e50000',
         'cyan': '#61C4B7',
         'red': '#C41230',
         'grey': '#757575',
@@ -15,9 +15,11 @@ module.exports = {
       },
       fontFamily: {
         hepta: ['"Hepta Slab"'],
+        fraunces: ['"Fraunces'],
       },
       backgroundImage: {
         'background-welcome': "url('src/components/images/background2.jpg')",
+        'background-characters': "url('src/components/images/background-characters.jpeg')",
       }
     },
   },
