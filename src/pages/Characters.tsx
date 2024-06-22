@@ -73,7 +73,7 @@ const CharacterCardLeft: React.FC<CharacterCardProps> = ({
         className="object-cover object-center"
       />
       <div className="flex flex-col gap-2">
-        <h2 className="text-2xl">{name}</h2>
+        <h2 className="text-2xl text-galactic-blue">{name}</h2>
         <p>{description}</p>
       </div>
     </div>
@@ -89,7 +89,7 @@ const CharacterCardRight: React.FC<CharacterCardProps> = ({
   return (
     <div className="flex justify-center items-center gap-2">
       <div className="flex flex-col gap-2">
-        <h2 className="text-2xl">{name}</h2>
+        <h2 className="text-2xl text-galactic-blue">{name}</h2>
         <p>{description}</p>
       </div>
       <img

@@ -1,3 +1,5 @@
 export * from "./Navbar";
 export * from "./SecondNav";
-export * from "./Content";
+export * from "./ContentFamily";
+export * from "./ContentFriends";
+export * from "./ContentSatire";

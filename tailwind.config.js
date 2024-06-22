@@ -20,7 +20,9 @@ module.exports = {
       backgroundImage: {
         'background-welcome': "url('src/components/images/background2.jpg')",
         'background-characters': "url('src/components/images/background-characters.jpeg')",
-        'background-theme': "url('src/components/images/background-theme.jpg')",
+        'background-family': "url('src/components/images/background-theme.jpg')",
+        'background-friends': "url('src/components/images/background-friends.jpg')",
+        'background-satire': "url('src/components/images/background-satire.jpg')",
       }
     },
   },
